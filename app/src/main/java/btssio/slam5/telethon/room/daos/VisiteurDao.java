@@ -19,7 +19,7 @@ public interface VisiteurDao {
     void insert(Visiteur visiteur);
 
     @Update
-    void updateUser(Visiteur visiteur);
+    void update(Visiteur visiteur);
 
     @Delete
     void delete(Visiteur visiteur);
@@ -28,7 +28,7 @@ public interface VisiteurDao {
     void deleteAll(Visiteur... visiteur);
 
     @Query("SELECT * FROM visiteur")
-    List<Visiteur> getVisiteur();
+    List<Visiteur> getVisiteurs();
 
     @Transaction
     @Query("SELECT * FROM visiteur")

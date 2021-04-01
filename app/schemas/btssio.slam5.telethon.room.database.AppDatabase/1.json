@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "fda3dace3e051d6dc1e872cc5675a8a7",
+    "identityHash": "392279867bfe3b85f2075e86657e0e71",
     "entities": [
       {
         "tableName": "utilisateur",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `age` INTEGER NOT NULL, `mail` TEXT, `mdp` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `dateNaissance` TEXT, `mail` TEXT, `mdp` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -27,10 +27,10 @@
             "notNull": false
           },
           {
-            "fieldPath": "age",
-            "columnName": "age",
-            "affinity": "INTEGER",
-            "notNull": true
+            "fieldPath": "dateNaissance",
+            "columnName": "dateNaissance",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "mail",
@@ -56,7 +56,7 @@
       },
       {
         "tableName": "visiteur",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profession` TEXT, `isActif` INTEGER, `shareDatas` INTEGER, `randomUsername` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `age` INTEGER NOT NULL, `mail` TEXT, `mdp` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profession` TEXT, `isActif` INTEGER, `shareDatas` INTEGER, `randomUsername` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `dateNaissance` TEXT, `mail` TEXT, `mdp` TEXT)",
         "fields": [
           {
             "fieldPath": "profession",
@@ -101,10 +101,10 @@
             "notNull": false
           },
           {
-            "fieldPath": "age",
-            "columnName": "age",
-            "affinity": "INTEGER",
-            "notNull": true
+            "fieldPath": "dateNaissance",
+            "columnName": "dateNaissance",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "mail",
@@ -130,7 +130,7 @@
       },
       {
         "tableName": "responsable",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`isResponsable` INTEGER, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `age` INTEGER NOT NULL, `mail` TEXT, `mdp` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`isResponsable` INTEGER, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom` TEXT, `prenom` TEXT, `dateNaissance` TEXT, `mail` TEXT, `mdp` TEXT)",
         "fields": [
           {
             "fieldPath": "isResponsable",
@@ -157,10 +157,10 @@
             "notNull": false
           },
           {
-            "fieldPath": "age",
-            "columnName": "age",
-            "affinity": "INTEGER",
-            "notNull": true
+            "fieldPath": "dateNaissance",
+            "columnName": "dateNaissance",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "mail",
@@ -296,7 +296,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fda3dace3e051d6dc1e872cc5675a8a7')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '392279867bfe3b85f2075e86657e0e71')"
     ]
   }
 }

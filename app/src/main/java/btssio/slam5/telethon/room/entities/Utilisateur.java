@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.sql.Date;
+
 @Entity(tableName = "utilisateur")
 public class Utilisateur {
 
@@ -12,25 +14,35 @@ public class Utilisateur {
     private int id;
     private String nom;
     private String prenom;
-    private int age;
+    private String dateNaissance;
     private String mail;
     private String mdp;
 
-    public Utilisateur(int id, String nom, String prenom, int age, String mail, String mdp){
+    public Utilisateur(int id, String nom, String prenom, String dateNaissance, String mail, String mdp){
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.age = age;
+        this.dateNaissance = dateNaissance;
         this.mail = mail;
         this.mdp = mdp;
     }
 
     @Ignore
-    public Utilisateur(String nom, String prenom, int age, String mail, String mdp){
+    public Utilisateur(String nom, String prenom, String dateNaissance, String mail, String mdp){
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.age = age;
+        this.dateNaissance = dateNaissance;
+        this.mail = mail;
+        this.mdp = mdp;
+    }
+
+    @Ignore
+    public Utilisateur(int id, String nom, String prenom, String dateNaissance, String mail){
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
         this.mail = mail;
         this.mdp = mdp;
     }
@@ -59,12 +71,12 @@ public class Utilisateur {
         this.prenom = prenom;
     }
 
-    public int getAge() {
-        return age;
+    public String getDateNaissance() {
+        return dateNaissance;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(String dateNaissance) {
+        this.dateNaissance = dateNaissance;
     }
 
     public String getMail() {

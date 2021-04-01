@@ -7,8 +7,8 @@ public class Responsable extends Utilisateur{
 
     private Boolean isResponsable;
 
-    public Responsable(String nom, String prenom, int age, String mail, String mdp, Boolean isResponsable){
-        super(nom, prenom, age, mail, mdp);
+    public Responsable(String nom, String prenom, String dateNaissance, String mail, String mdp, Boolean isResponsable){
+        super(nom, prenom, dateNaissance, mail, mdp);
         this.isResponsable = isResponsable;
     }
 

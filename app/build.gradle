@@ -61,4 +61,9 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
     /* ROOM */
+
+    /* VOLLEY */
+    implementation 'com.android.volley:volley:1.2.0'
+    /* VOLLEY */
+
 }

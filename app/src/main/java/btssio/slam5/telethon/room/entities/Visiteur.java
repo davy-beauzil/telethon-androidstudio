@@ -11,8 +11,8 @@ public class Visiteur extends Utilisateur{
     private Boolean shareDatas;
     private String randomUsername;
 
-    public Visiteur(String nom, String prenom, int age, String mail, String mdp, String profession, Boolean isActif, Boolean shareDatas, String randomUsername){
-        super(nom, prenom, age, mail, mdp);
+    public Visiteur(String nom, String prenom, String dateNaissance, String mail, String mdp, String profession, Boolean isActif, Boolean shareDatas, String randomUsername){
+        super(nom, prenom, dateNaissance, mail, mdp);
         this.profession = profession;
         this.isActif = isActif;
         this.shareDatas = shareDatas;

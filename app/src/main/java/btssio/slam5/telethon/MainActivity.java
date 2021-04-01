@@ -24,12 +24,10 @@ public class MainActivity extends AppCompatActivity {
         VisiteurDao visiteurDao = db.visiteurDao();
 
 
-        Visiteur visiteur = new Visiteur("Dupont", "Jacques", 56, "jacques.dupont@gmail.com", "jacques.dupont", "menuisier", false, true, "user1725192");
+        Visiteur visiteur = new Visiteur("Dupont", "Jacques", "2020-10-10", "jacques.dupont@gmail.com", "jacques.dupont", "menuisier", false, true, "user1725192");
         visiteurDao.insert(visiteur);
 
-        List<Visiteur> jacques = visiteurDao.getVisiteur();
 
         TextView test = findViewById(R.id.test);
-        test.setText(jacques.get(0).getNom());
     }
 }
